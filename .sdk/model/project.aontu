@@ -1,0 +1,37 @@
+main: kit: repo: {
+  path: 'BahodirMadatov/tmdb-movies-sdk'
+  host: 'github.com'
+}
+
+main: kit: author: {
+  name: 'Bahodir Madatov'
+  url: 'https://github.com/BahodirMadatov'
+}
+
+main: kit: publisher: {
+  name: 'Bahodir Madatov'
+  url: 'https://github.com/BahodirMadatov/tmdb-movies-sdk'
+  security: 'https://github.com/BahodirMadatov/tmdb-movies-sdk/security/advisories/new'
+  official: false
+}
+
+main: kit: text: {
+  title: 'TMDB'
+  summary: 'An unofficial TypeScript SDK for searching TMDB movies and loading movie details.'
+  tagline: 'Search movies and load details with a typed TypeScript client.'
+  about_md: 'This starter SDK covers two TMDB v3 operations: movie search and movie details. `Movie().list({ query })` searches titles; `Movie().load({ id })` retrieves details. Set `apikey` to your TMDB API Read Access Token. The generated client sends it as a Bearer token. If you display TMDB data in an application, follow TMDB’s attribution requirements and API terms.'
+  entity_desc: { movie: 'A movie from search or detail lookup; list searches titles and load retrieves a movie by TMDB ID.' }
+}
+
+main: kit: target: ts: {
+  author: {
+    name: 'Bahodir Madatov'
+    url: 'https://github.com/BahodirMadatov'
+  }
+  publish: {
+    version: '0.1.0'
+    registry: {
+      package: '@bahodirmadatov/tmdb-movies-sdk'
+    }
+  }
+}

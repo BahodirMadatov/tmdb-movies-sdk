@@ -1,0 +1,878 @@
+{
+  "def": "tmdb-movies-openapi.json",
+  "main": {
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "Bahodir Madatov",
+        "url": "https://github.com/BahodirMadatov"
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "copies": "merge",
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "github-pages": {
+            "active": false,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "github-pages",
+            "name": "github-pages",
+            "origname": "",
+            "output": {
+              "path": "docs"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          },
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "movie": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "adult": {
+              "a": true,
+              "h": "Adult",
+              "n": "adult",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "backdrop_path": {
+              "a": true,
+              "h": "Backdrop Path",
+              "n": "backdrop_path",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "belongs_to_collection": {
+              "a": true,
+              "h": "Belongs To Collection",
+              "n": "belongs_to_collection",
+              "r": false,
+              "t": "`$OBJECT`"
+            },
+            "budget": {
+              "a": true,
+              "h": "Budget",
+              "n": "budget",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "genre_ids": {
+              "a": true,
+              "h": "Genre Ids",
+              "n": "genre_ids",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "genres": {
+              "a": true,
+              "h": "Genres",
+              "n": "genres",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "homepage": {
+              "a": true,
+              "h": "Homepage",
+              "n": "homepage",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "imdb_id": {
+              "a": true,
+              "h": "Imdb Id",
+              "n": "imdb_id",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "origin_country": {
+              "a": true,
+              "h": "Origin Country",
+              "n": "origin_country",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "original_language": {
+              "a": true,
+              "h": "Original Language",
+              "n": "original_language",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "original_title": {
+              "a": true,
+              "h": "Original Title",
+              "n": "original_title",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "overview": {
+              "a": true,
+              "h": "Overview",
+              "n": "overview",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "popularity": {
+              "a": true,
+              "h": "Popularity",
+              "n": "popularity",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "poster_path": {
+              "a": true,
+              "h": "Poster Path",
+              "n": "poster_path",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "production_companies": {
+              "a": true,
+              "h": "Production Companies",
+              "n": "production_companies",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "production_countries": {
+              "a": true,
+              "h": "Production Countries",
+              "n": "production_countries",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "release_date": {
+              "a": true,
+              "h": "Release Date",
+              "n": "release_date",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "revenue": {
+              "a": true,
+              "h": "Revenue",
+              "n": "revenue",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "runtime": {
+              "a": true,
+              "h": "Runtime",
+              "n": "runtime",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "spoken_languages": {
+              "a": true,
+              "h": "Spoken Languages",
+              "n": "spoken_languages",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "status": {
+              "a": true,
+              "h": "Status",
+              "n": "status",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "tagline": {
+              "a": true,
+              "h": "Tagline",
+              "n": "tagline",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "video": {
+              "a": true,
+              "h": "Video",
+              "n": "video",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "vote_average": {
+              "a": true,
+              "h": "Vote Average",
+              "n": "vote_average",
+              "r": false,
+              "t": "`$NUMBER`"
+            },
+            "vote_count": {
+              "a": true,
+              "h": "Vote Count",
+              "n": "vote_count",
+              "r": false,
+              "t": "`$INTEGER`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "movie",
+          "op": {
+            "list": {
+              "active": true,
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /3/search/movie",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": false,
+                        "explode": true,
+                        "k": "query",
+                        "n": "include_adult",
+                        "or": "include_adult",
+                        "r": false,
+                        "style": "form",
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "en-US",
+                        "explode": true,
+                        "k": "query",
+                        "n": "language",
+                        "or": "language",
+                        "r": false,
+                        "style": "form",
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 1,
+                        "explode": true,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "style": "form",
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "explode": true,
+                        "k": "query",
+                        "n": "primary_release_year",
+                        "or": "primary_release_year",
+                        "r": false,
+                        "style": "form",
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "explode": true,
+                        "k": "query",
+                        "n": "query",
+                        "or": "query",
+                        "r": true,
+                        "style": "form",
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "explode": true,
+                        "k": "query",
+                        "n": "region",
+                        "or": "region",
+                        "r": false,
+                        "style": "form",
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "explode": true,
+                        "k": "query",
+                        "n": "year",
+                        "or": "year",
+                        "r": false,
+                        "style": "form",
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/3/search/movie",
+                  "q": {
+                    "exist": [
+                      "query"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "3"
+                    },
+                    {
+                      "lit": "search"
+                    },
+                    {
+                      "lit": "movie"
+                    }
+                  ],
+                  "t": {
+                    "page": {
+                      "total": "`body.total_results`"
+                    },
+                    "req": "`reqdata`",
+                    "res": "`body.results`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "active": true,
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /3/movie/{movie_id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "movie_id",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "explode": true,
+                        "k": "query",
+                        "n": "append_to_response",
+                        "or": "append_to_response",
+                        "r": false,
+                        "style": "form",
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "en-US",
+                        "explode": true,
+                        "k": "query",
+                        "n": "language",
+                        "or": "language",
+                        "r": false,
+                        "style": "form",
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/3/movie/{movie_id}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "movie_id": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "3"
+                    },
+                    {
+                      "lit": "movie"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreDone": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "PreUnexpected": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicMovieFlow": {
+          "active": true,
+          "entity": "movie",
+          "key$": "BasicMovieFlow",
+          "kind": "basic",
+          "name": "BasicMovieFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "movie_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "movie_ref01",
+                "srcdatavar": "movie_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "movie01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-movie_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "http": {
+        "useragent": ""
+      },
+      "info": {
+        "contact": {
+          "name": "TMDB API documentation",
+          "url": "https://developer.themoviedb.org/"
+        },
+        "description": "Focused OpenAPI subset for TMDB movie search and movie details.",
+        "security": {
+          "in": "header",
+          "name": "Authorization",
+          "prefix": "Bearer",
+          "scheme": "sec0",
+          "type": "http"
+        },
+        "servers": [
+          {
+            "url": "https://api.themoviedb.org"
+          }
+        ],
+        "summary": "Focused OpenAPI subset for TMDB movie search and movie details.",
+        "title": "TMDB API v3",
+        "version": "3",
+        "website": "https://themoviedb.org"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,patch,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "active": true,
+          "hint": "0",
+          "keys": "key,secret,token,password,passwd,authorization,cookie,credential,signature",
+          "mask": "[redacted]",
+          "min": "4",
+          "values": ""
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "publisher": {
+        "name": "Bahodir Madatov",
+        "official": false,
+        "security": "https://github.com/BahodirMadatov/tmdb-movies-sdk/security/advisories/new",
+        "url": "https://github.com/BahodirMadatov/tmdb-movies-sdk"
+      },
+      "repo": {
+        "host": "github.com",
+        "path": "BahodirMadatov/tmdb-movies-sdk"
+      },
+      "target": {
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "Bahodir Madatov",
+            "url": "https://github.com/BahodirMadatov"
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "consumes": "",
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "tmdb-movies",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "@bahodirmadatov/tmdb-movies-sdk",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.1.0"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "surface": "",
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      },
+      "text": {
+        "about_md": "This starter SDK covers two TMDB v3 operations: movie search and movie details. `Movie().list({ query })` searches titles; `Movie().load({ id })` retrieves details. Set `apikey` to your TMDB API Read Access Token. The generated client sends it as a Bearer token. If you display TMDB data in an application, follow TMDB’s attribution requirements and API terms.",
+        "docs_url": "",
+        "entity_desc": {
+          "movie": "A movie from search or detail lookup; list searches titles and load retrieves a movie by TMDB ID."
+        },
+        "homepage": "",
+        "meta_source": "",
+        "summary": "An unofficial TypeScript SDK for searching TMDB movies and loading movie details.",
+        "tagline": "Search movies and load details with a typed TypeScript client.",
+        "title": "TMDB",
+        "website": ""
+      }
+    }
+  },
+  "name": "tmdb-movies",
+  "origin": "voxgig-sdk"
+}

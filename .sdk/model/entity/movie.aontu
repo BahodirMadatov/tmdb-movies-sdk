@@ -1,0 +1,369 @@
+# Entity: movie
+
+main: kit: entity: movie: {
+
+  alias: field: {}
+
+  fields: {
+    adult: {
+      h: "Adult"
+      n: "adult"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    backdrop_path: {
+      h: "Backdrop Path"
+      n: "backdrop_path"
+      r: false
+      t: "`$STRING`"
+    }
+    belongs_to_collection: {
+      h: "Belongs To Collection"
+      n: "belongs_to_collection"
+      r: false
+      t: "`$OBJECT`"
+    }
+    budget: {
+      h: "Budget"
+      n: "budget"
+      r: false
+      t: "`$INTEGER`"
+    }
+    genre_ids: {
+      h: "Genre Ids"
+      n: "genre_ids"
+      r: false
+      t: "`$ARRAY`"
+    }
+    genres: {
+      h: "Genres"
+      n: "genres"
+      r: false
+      t: "`$ARRAY`"
+    }
+    homepage: {
+      h: "Homepage"
+      n: "homepage"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$INTEGER`"
+    }
+    imdb_id: {
+      h: "Imdb Id"
+      n: "imdb_id"
+      r: false
+      t: "`$STRING`"
+    }
+    origin_country: {
+      h: "Origin Country"
+      n: "origin_country"
+      r: false
+      t: "`$ARRAY`"
+    }
+    original_language: {
+      h: "Original Language"
+      n: "original_language"
+      r: false
+      t: "`$STRING`"
+    }
+    original_title: {
+      h: "Original Title"
+      n: "original_title"
+      r: false
+      t: "`$STRING`"
+    }
+    overview: {
+      h: "Overview"
+      n: "overview"
+      r: false
+      t: "`$STRING`"
+    }
+    popularity: {
+      h: "Popularity"
+      n: "popularity"
+      r: false
+      t: "`$NUMBER`"
+    }
+    poster_path: {
+      h: "Poster Path"
+      n: "poster_path"
+      r: false
+      t: "`$STRING`"
+    }
+    production_companies: {
+      h: "Production Companies"
+      n: "production_companies"
+      r: false
+      t: "`$ARRAY`"
+    }
+    production_countries: {
+      h: "Production Countries"
+      n: "production_countries"
+      r: false
+      t: "`$ARRAY`"
+    }
+    release_date: {
+      h: "Release Date"
+      n: "release_date"
+      r: false
+      t: "`$STRING`"
+    }
+    revenue: {
+      h: "Revenue"
+      n: "revenue"
+      r: false
+      t: "`$INTEGER`"
+    }
+    runtime: {
+      h: "Runtime"
+      n: "runtime"
+      r: false
+      t: "`$INTEGER`"
+    }
+    spoken_languages: {
+      h: "Spoken Languages"
+      n: "spoken_languages"
+      r: false
+      t: "`$ARRAY`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: false
+      t: "`$STRING`"
+    }
+    tagline: {
+      h: "Tagline"
+      n: "tagline"
+      r: false
+      t: "`$STRING`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: false
+      t: "`$STRING`"
+    }
+    video: {
+      h: "Video"
+      n: "video"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    vote_average: {
+      h: "Vote Average"
+      n: "vote_average"
+      r: false
+      t: "`$NUMBER`"
+    }
+    vote_count: {
+      h: "Vote Count"
+      n: "vote_count"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "movie"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /3/search/movie"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: false
+                explode: true
+                k: "query"
+                n: "include_adult"
+                or: "include_adult"
+                r: false
+                style: "form"
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: "en-US"
+                explode: true
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                style: "form"
+                t: "`$STRING`"
+              }
+              {
+                ex: 1
+                explode: true
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                style: "form"
+                t: "`$INTEGER`"
+              }
+              {
+                explode: true
+                k: "query"
+                n: "primary_release_year"
+                or: "primary_release_year"
+                r: false
+                style: "form"
+                t: "`$STRING`"
+              }
+              {
+                explode: true
+                k: "query"
+                n: "query"
+                or: "query"
+                r: true
+                style: "form"
+                t: "`$STRING`"
+              }
+              {
+                explode: true
+                k: "query"
+                n: "region"
+                or: "region"
+                r: false
+                style: "form"
+                t: "`$STRING`"
+              }
+              {
+                explode: true
+                k: "query"
+                n: "year"
+                or: "year"
+                r: false
+                style: "form"
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/search/movie"
+          q: {
+            exist: [
+              "query"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "search"
+            }
+            {
+              lit: "movie"
+            }
+          ]
+          t: {
+            page: {
+              total: "`body.total_results`"
+            }
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /3/movie/{movie_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "movie_id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+            query: [
+              {
+                explode: true
+                k: "query"
+                n: "append_to_response"
+                or: "append_to_response"
+                r: false
+                style: "form"
+                t: "`$STRING`"
+              }
+              {
+                ex: "en-US"
+                explode: true
+                k: "query"
+                n: "language"
+                or: "language"
+                r: false
+                style: "form"
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/3/movie/{movie_id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              movie_id: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "3"
+            }
+            {
+              lit: "movie"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

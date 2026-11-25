@@ -1,0 +1,17 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "identifiers": [
+    "Movie"
+  ],
+  "quoted": {
+    "SUMMARY.md": [
+      "200",
+      "A movie from search or detail lookup; list searches titles and load retrieves a movie by TMDB ID.",
+      "An unofficial TypeScript SDK for searching TMDB movies and loading movie details."
+    ]
+  }
+}
